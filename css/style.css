@@ -148,6 +148,7 @@ body::before {
 .trilogy {
   background: #fff;
   color: #333;
+
 }
 .trilogy h2 {
   font-family: var(--serif);
@@ -597,3 +598,152 @@ html {
   background: rgba(255,255,255,0.1);
 }
 
+/* ——— Seção de Perfil Spotify ——— */
+#profile {
+  background: #191414;
+  color: #fff;
+  padding: 4rem 1rem;
+}
+
+#profile h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1db954;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #282828;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.profile-info {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.profile-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.profile-info .followers {
+  margin: 0.5rem 0 1.5rem;
+  font-size: 0.9rem;
+  color: #b3b3b3;
+}
+
+.btn-follow {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #1db954;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn-follow:hover {
+  background: #17a44c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    margin-top: 1rem;
+    border-radius: 60px;
+  }
+  .profile-info {
+    padding: 1rem;
+  }
+}
+
+/* ——— Trilogia responsivo mais largo ——— */
+@media (max-width: 768px) {
+  #trilogia .wrap {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  .trilogy .cards {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(140px, 1fr) );
+    gap: 1rem;
+  }
+  .trilogy article {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #trilogia .wrap {
+    padding: 0 0.5rem;
+  }
+  .trilogy .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Aumentar a altura das imagens na Trilogia */
+#trilogia .trilogy article img {
+  min-height: 240px;    /* era 160px; agora maior */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #trilogia .trilogy article img {
+    min-height: 240px;  /* ajusta um pouco menor em tablets */
+  }
+}
+@media (max-width: 480px) {
+  #trilogia .trilogy article img {
+    min-height: 240px;  /* mantém bom ratio no celular */
+  }
+}
+
+/* Ler mais / Ler menos */
+.trilogy .dots {
+  display: inline;
+}
+.trilogy .extra {
+  display: none;
+}
+
+/* Quando o próprio article tiver .expanded */
+.trilogy article.expanded .dots {
+  display: none;
+}
+.trilogy article.expanded .extra {
+  display: inline;
+}
+
+.trilogy .read-more {
+  display: inline-block;
+  margin-top: .5rem;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+.trilogy .read-more:hover {
+  text-decoration: underline;
+}

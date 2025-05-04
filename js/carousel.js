@@ -75,3 +75,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
   update();
 });
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.trilogy .read-more').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const art = link.closest('article');
+      if (art.classList.contains('expanded')) {
+        // contrair
+        art.classList.remove('expanded');
+        link.textContent = 'Ler mais';
+      } else {
+        // expandir
+        art.classList.add('expanded');
+        link.textContent = 'Ler menos';
+      }
+    });
+  });
+});
