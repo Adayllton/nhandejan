@@ -447,3 +447,91 @@ body{
     padding-left: 0.5rem;
   }
 }
+
+/* ——— Seção de Mensagem Final ——— */
+#mensagem {
+  background: linear-gradient(135deg, rgba(255,51,102,0.1), rgba(40,40,40,0.1));
+  border-top: 2px solid var(--accent);
+  padding: 3rem 1rem;
+}
+
+#mensagem .message-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+#mensagem .message-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  flex-shrink: 0;
+}
+
+#mensagem .message-content {
+  font-family: var(--serif);
+  color: #333;
+  line-height: 1.6;
+}
+
+#mensagem .message-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+}
+
+#mensagem .message-content p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+#mensagem .message-content p em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+#mensagem .closing {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #mensagem .message-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #mensagem .message-photo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+  #mensagem .message-content h2 {
+    font-size: 1.6rem;
+  }
+  #mensagem .message-content p {
+    font-size: 0.95rem;
+  }
+  #mensagem .closing {
+    text-align: center;
+  }
+}
+
+/* Fonte manuscrita tipo diário */
+#mensagem .message-content {
+  font-family: 'Patrick Hand', cursive;
+}
+
+

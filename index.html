@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Aniversário da Nhandeara</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
@@ -19,7 +20,7 @@
       <p>Conheci ela na primeira infância, reconheci ela dia 4 de novembro de 2024 e em todos os meus 16 anos de vida ela foi a que mais confiei minhas alegrias e tristezas, não me arrependo em nada!</p>
       <a href="#favoritos" class="btn">Ver favoritos ↓</a>
     </div>
-    <img src="asset/img/carousel/p2.jpg" class="hero-photo"/>
+    <img src="assets/img/p2.jpg" class="hero-photo"/>
   </section>
 
   <section id="favoritos" class="creators section">
@@ -97,14 +98,32 @@
 
   <section id="carousel-section" class="section">
     <div class="wrap">
+      <div class="nhan" style="text-align: center;">
       <h2>Fotos da Nhandeara</h2>
-      <div class="carousel">
+      </div>
+      <div class="carousel" style="border-radius: 25px;">
         <button id="carousel-prev">‹</button>
         <div class="carousel-track"></div>
         <button id="carousel-next">›</button>
       </div>
     </div>
   </section>
+
+  <section id="mensagem" class="message section">
+    <div class="wrap">
+      <div class="message-card">
+        <img src="assets/img/parabens.png" alt="Jan sorrindo" class="message-photo"/>
+        <div class="message-content">
+          <h2>Feliz aniversário, Nhan!!!</h2>
+          <p>Eu (esse bobão da foto) gostaria de te desejar muitas felicidades em sua jornada. Eu, que sempre vivi pelo lado melancólico da vida — minha alma só contemplava as sombras e as trevas do mundo material — era como máquina: frio como gelo e com problemas de lubrificação…</p>
+          <p>Mas então o Sol apareceu, o gelo derreteu, e o que antes era óleo petrificado se tornou sangue jorrando em minhas veias. Pela primeira vez percebi que somos algo além de matéria: senti minha alma despertar. Era como se tivesse um dos olhos fechados por toda a vida e, de repente, a realidade ganhou novos eixos — tudo isso graças ao seu auxílio em minha jornada.</p>
+          <p>Esse foi só um dos relatos das dezenas de pessoas que você já ajudou. Espero que continue irradiando seu brilho por onde passa. E lembre-se: por mais que a chuva insista em cair e o tempo pareça não mudar, lembre-se da parábola do anel: <em>"isso também passará"</em>. Por mais herege e profano que eu seja, peço do fundo da minha alma que qualquer entidade organize seus caminhos para que você seja guiada pela sua vontade de potência (sim, eu tinha que citar Nietzsche em algum ponto! 😂) e assim alcance — e supere — seus máximos.</p>
+          <p class="closing">Essa enrolação toda foi só para dizer: <strong>feliz 17 anos, gata!</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('a[href^="#"]').forEach(a => {
