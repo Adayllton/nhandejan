@@ -537,3 +537,63 @@ body{
 html {
   scroll-behavior: smooth;
 }
+
+
+.spotify-embed {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #0066cc;   /* azul */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.spotify-embed iframe {
+  display: block;
+  border: none;
+  /* use width:100% e height em HTML */
+}
+
+
+/* Spotify-clone custom */
+.spotify-clone .player {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #004080;                /* azul */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.spotify-clone iframe {
+  display: block;
+  width: 100%;
+  height: 80px;
+  border: none;
+}
+
+.spotify-clone #playlist {
+  list-style: none;
+  max-height: 360px;                  /* ajusta pra mostrar mais faixas */
+  overflow-y: auto;
+  margin: 0; padding: 0;
+}
+
+.spotify-clone #playlist li {
+  padding: 0.75rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.spotify-clone #playlist li:first-child {
+  border-top: none;
+}
+
+.spotify-clone #playlist li:hover,
+.spotify-clone #playlist li.active {
+  background: rgba(255,255,255,0.1);
+}
+
