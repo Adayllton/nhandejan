@@ -26,28 +26,8 @@ window.addEventListener('DOMContentLoaded', () => {
       const img = document.createElement('img');
       img.src = imgSrc;
       el.appendChild(img);
-  
-      // previne scroll ao tocar/arrastar
-      el.addEventListener('pointerdown', e => e.preventDefault());
-      el.addEventListener('pointermove', e => {
-        e.preventDefault();
-        if (e.pressure === 0) return;
-        const currentY = parseFloat(getComputedStyle(img).transform.split(',')[5]) || 0;
-        let y = e.clientY - e.target.getBoundingClientRect().top - currentY;
-        const minY = Math.min(0, el.clientHeight - img.getBoundingClientRect().height);
-        y = Math.max(minY, Math.min(0, y));
-        img.style.transform = `translateY(${y}px)`;
-      });
-      el.addEventListener('touchstart', e => e.preventDefault());
-      el.addEventListener('touchmove', e => {
-        e.preventDefault();
-        const touchY = e.touches[0].clientY - el.getBoundingClientRect().top;
-        const currentY = parseFloat(getComputedStyle(img).transform.split(',')[5]) || 0;
-        let y = touchY - currentY;
-        const minY = Math.min(0, el.clientHeight - img.getBoundingClientRect().height);
-        y = Math.max(minY, Math.min(0, y));
-        img.style.transform = `translateY(${y}px)`;
-      });
+
+      
   
       el.addEventListener('animationend', e => {
         if (e.animationName === 'floatUp') container.removeChild(el);

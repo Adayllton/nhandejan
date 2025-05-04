@@ -73,7 +73,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 100vh;
   text-align: center;
   background: linear-gradient(135deg,#1e1e1e,#0a0a0a);
   padding: 2rem 1rem;
@@ -534,4 +534,6 @@ body{
   font-family: 'Patrick Hand', cursive;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
