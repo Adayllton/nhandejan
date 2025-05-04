@@ -1,0 +1,120 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Aniversário da Nhandeara</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <div class="grain"></div>
+    <div id="floating-shapes"></div>
+  <section id="hero" class="rupture section">
+    <div class="wrap">
+      <h1>Quem é a Nhandeara?</h1>
+      <p>Nhandeara Tomaz Caminha Salopez nasceu em 6 de maio do ano de 2008 em Teresina-PI, atualmente mora em Floriano-PI, mas toda essa descrição em nada diz quem é ela.</p> 
+      <p>Nhan/Nhay/Salopez, é uma garota incrível, doce, meiga, é amável.</p>
+      <p>Conheci ela na primeira infância, reconheci ela dia 4 de novembro de 2024 e em todos os meus 16 anos de vida ela foi a que mais confiei minhas alegrias e tristezas, não me arrependo em nada!</p>
+      <a href="#favoritos" class="btn">Ver favoritos ↓</a>
+    </div>
+    <img src="asset/img/carousel/p2.jpg" class="hero-photo"/>
+  </section>
+
+  <section id="favoritos" class="creators section">
+    <div class="wrap">
+      <h2>Coisas que a Nhandeara Ama</h2>
+  
+      <div class="favorites-grid">
+        <div class="favorite-card">
+          <img src="assets/img/sushi.png" alt="Sushi">
+          <h3>Comida favorita: Sushi</h3>
+          <p>Adora a combinação de arroz macio, peixe fresco e um toque de wasabi que desperta o paladar.</p>
+        </div>
+        <div class="favorite-card">
+          <img src="assets/img/cafe.png" alt="Café Pilão">
+          <h3>Café favorito: Café Pilão</h3>
+          <p>Ela adora o sabor encorpado e o aroma intenso do Café Pilão logo pela manhã — é o impulso perfeito para começar o dia com energia.</p>
+        </div>        
+        <div class="favorite-card">
+          <img src="assets/img/snickers.png" alt="Snickers">
+          <h3>Doce favorito: Snickers</h3>
+          <p>Não resiste à mistura de caramelo, amendoim crocante e chocolate — um abraço em forma de barrinha.</p>
+        </div>
+      </div>
+  
+      <h3 class="actions-title">Pequenas Ações Favoritas</h3>
+      <ul class="actions-list">
+        <li>Acordar e tomar uma boa xícara de café preto com calma</li>
+        <li>Ver os pais logo cedo</li>
+        <li>Ganhar beijos na testa</li>
+        <li>Escutar os problemas dos outros e dar bons conselhos</li>
+        <li>Quando as pessoas confiam a ela opiniões e experiências</li>
+        <li>Quando os professores a tratam como filha</li>
+        <li>Limpar a casa e ter o sentimento de “obrigação concluída”</li>
+        <li>Quando ela cozinha e todos gostam da comida que ela preparou</li>
+        <li>Dar uma risada sincera depois de muito tempo</li>
+        <li>Ajudar as pessoas</li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section id="trilogia" class="trilogy section">
+    <div class="wrap">
+      <h2>Trilogia “Antes do Amanhecer”</h2>
+      <div class="cards">
+        <article class="animate">
+          <img src="assets/img/antes.png" alt="Antes do Amanhecer"/>
+          <h3>Antes do Amanhecer</h3>
+          <p>Encontro mágico em Viena.</p>
+        </article>
+        <article class="animate">
+          <img src="assets/img/por.png" alt="Antes do Pôr-do-Sol"/>
+          <h3>Antes do Pôr-do-Sol</h3>
+          <p>Reencontro em Paris, 9 anos depois.</p>
+        </article>
+        <article class="animate">
+          <img src="assets/img/meia.png" alt="Antes da Meia-Noite"/>
+          <h3>Antes da Meia-Noite</h3>
+          <p>Amadurecimento e desafios de um amor duradouro.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="player" class="spotify-clone section">
+    <div class="wrap">
+      <h2>Playlist da Nhandeara</h2>
+      <div class="player">
+        <div class="cover"><img src="asset/img/carousel/p10.jpg" alt="Cover"/></div>
+        <ul id="playlist"></ul>
+        <audio id="audio" controls></audio>
+      </div>
+    </div>
+  </section>
+
+  <section id="carousel-section" class="section">
+    <div class="wrap">
+      <h2>Fotos da Nhandeara</h2>
+      <div class="carousel">
+        <button id="carousel-prev">‹</button>
+        <div class="carousel-track"></div>
+        <button id="carousel-next">›</button>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => e.preventDefault());
+      });
+    });
+  </script>  
+  <script src="js/carousel.js"></script>
+  <script src="js/player.js"></script>
+  <!-- <script src="js/animations.js"></script>
+  <script src="js/shapes.js"></script> -->
+  </body>
+  </html>
