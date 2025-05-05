@@ -796,6 +796,15 @@ html {
   .message-photo {
     width: calc(50% - 0.5rem);
   }
+  .plain-photo{
+    left: -15px;
+    position: absolute;
+  }
+
+  .plaine-photo{
+    right: -60px;
+    position: absolute;
+  }
 }
 
 .message-photos {
@@ -807,27 +816,42 @@ html {
 }
 
 .plain-photo {
-  width: 50px;
+  width: 90px;
   height: auto;
   border: none;
   border-radius: 0;
-  transform: rotate(30deg);
-  margin-left: 5px;
+  transform: rotate(25deg);
+  margin-left: 6px;
+  position: relative;
+  left: -260px;
+  z-index: 1;
+
+  /* sombra realista em torno do recorte da PNG */
+  filter: drop-shadow(0 8px 6px rgba(0, 0, 0, 0.4));
 }
 
 .plaine-photo {
-  width: 100px;
+  width: 180px;
   height: auto;
   border: none;
   border-radius: 0;
-  transform: rotate(-30deg);
+  transform: rotate(-70deg);
+  margin-top: 7px;
+  position: relative;
+  right: -220px;
+  z-index: 1;
+
+  /* sombra realista em torno do recorte da PNG */
+  filter: drop-shadow(0 8px 6px rgba(0, 0, 0, 0.4));
 }
 
 .parabens-photo {
-  width: 100px;
+  width: 150px;
   height: auto;
   /* mantém os estilos que você já tinha para o parabéns */
   border: 3px solid var(--accent);
   border-radius: 8px;
   margin-right: 10px;
+  position: absolute;
+  z-index: 2;
 }
